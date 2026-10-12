@@ -1,0 +1,137 @@
+.register-container {
+  max-width: 800px; 
+  margin: 80px auto 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(199,0,0,0.18), 0 2px 8px rgba(199,0,0,0.08);
+  padding: 40px 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2.5px solid #c70000;
+  position: relative;
+}
+
+.register-container h1 {
+  color: #c70000;
+  font-size: 2em;
+  margin-bottom: 24px;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 0 #fffbe6, 0 2px 6px #bfa14a44;
+}
+
+.register-container form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 24px;
+}
+
+.register-container .input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.register-container .input-box input,
+.register-container .input-box select {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1.5px solid #ddd;
+  font-size: 1em;
+  transition: border 0.2s;
+  background: #fffbe6;
+  color: #7b2233;
+}
+
+.register-container .input-box input:focus,
+.register-container .input-box select:focus {
+  border: 1.5px solid #c70000;
+  outline: none;
+}
+
+.register-container .input-box label {
+  font-size: 1em;
+  color: #7b2233;
+  margin-left: 4px;
+  margin-bottom: 2px;
+  font-weight: 600;
+}
+
+/* Estilo advertencia Superadmin */
+.warning-tip {
+  margin-top: 6px;
+  background: #fff1f1;
+  color: #7a1020;
+  border: 1px solid #ffb3b3;
+  border-left: 4px solid #c70000;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  line-height: 1.2em;
+  box-shadow: 0 1px 4px rgba(199,0,0,0.06);
+}
+
+.register-container .button input[type="submit"] {
+  background: linear-gradient(90deg, #c70000 60%, #990000 100%);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1.1em;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(199,0,0,0.08);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.register-container .button input[type="submit"]:hover {
+  background: linear-gradient(90deg, #990000 60%, #c70000 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.register-container p {
+  margin-top: 18px;
+  font-size: 1em;
+  color: #333;
+  text-align: center;
+}
+
+.register-container a {
+  color: #c70000;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.register-container a:hover {
+  color: #990000;
+}
+
+
+/* Para que el título y el botón ocupen las dos columnas */
+.register-container h1,
+.register-container .button,
+.register-container p {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+/* Responsive: vuelve a una columna en pantallas pequeñas */
+@media (max-width: 700px) {
+  .register-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .register-container {
+    padding: 18px 4vw 12px 4vw;
+    max-width: 99vw;
+  }
+  .register-container h1 {
+    font-size: 1.5em;
+  }
+}

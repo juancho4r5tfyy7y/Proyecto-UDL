@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+    <link rel="stylesheet" href="assets/css/form_reg.css">
+</head>
+<body>
+    <div class="register-container">
+        <h1>Registro</h1>
+        <form method="POST" action="php/register.php">
+            <div class="input-box">
+                <input type="text" name="nombre" required>
+                <label>Nombre</label>
+            </div>
+            <div class="input-box">
+                <input type="text" name="apellidos" required>
+                <label>Apellidos</label>
+            </div>
+            <div class="input-box">
+                <input type="text" name="usuario" required>
+                <label>Usuario</label>
+            </div>
+            <div class="input-box">
+                <input type="password" name="clave" required>
+                <label>Contraseña</label>
+            </div>
+            <div class="input-box">
+                <input type="email" name="email" required>
+                <label>Correo electrónico</label>
+            </div>
+            <div class="input-box">
+                <input type="text" name="contacto" required>
+                <label>Contacto</label>
+            </div>
+            <div class="input-box">
+                <input type="text" name="documento" required>
+                <label>Documento</label>
+            </div>
+            <div class="input-box">
+                <select name="tipo" required>
+                    <option value="">Tipo de documento</option>
+                    <option value="CC">CC</option>
+                    <option value="TI">TI</option>
+                    <option value="CE">CE</option>
+                    <option value="PP">PP</option>
+                    <option value="NIT">NIT</option>
+                    <option value="PPT">PPT</option>
+                </select>
+                <label>Tipo de documento</label>
+            </div>
+            <div class="input-box">
+                <input type="date" name="nacimiento" required>
+                <label style="top:-18px;left:10px;font-size:12px;">Fecha de nacimiento</label>
+            </div>
+            <div class="input-box">
+                <input type="text" value="Estudiante" disabled>
+                <label>Rol asignado</label>
+                <input type="hidden" name="rol" value="estudiante">
+            </div>
+            <div class="input-box" id="gradoContainer" style="display: none;">
+                <select name="grado" id="grado" class="form-control">
+                    <option value="">Selecciona un grado</option>
+                    <option value="7">7°</option>
+                    <option value="8">8°</option>
+                    <option value="9">9°</option>
+                    <option value="10">10°</option>
+                    <option value="11">11°</option>
+                </select>
+                <label for="grado">Grado</label>
+            </div>
+            <div class="button">
+                <input type="submit" value="Registrarse">
+            </div>
+        </form>
+        <p>¿Ya tienes cuenta? <a href="php/login.php">Inicia sesión</a></p>
+    </div>
+
+
+
+    <script>
+        // Ejecutar cuando el DOM esté cargado
+        document.addEventListener('DOMContentLoaded', function() {
+            // Como el rol siempre es estudiante, mostrar siempre el campo de grado
+            mostrarGrado('estudiante');
+        });
+
+        function mostrarGrado(rol) {
+            console.log('Rol seleccionado:', rol); // Para debugging
+            const gradoContainer = document.getElementById('gradoContainer');
+            const gradoSelect = document.getElementById('grado');
+
+            if (rol === 'estudiante') {
+                gradoContainer.style.display = 'flex';
+                gradoContainer.style.flexDirection = 'column';
+                gradoSelect.required = true;
+            } else {
+                gradoContainer.style.display = 'none';
+                gradoSelect.required = false;
+                gradoSelect.value = '';
+            }
+        }
+    </script>
+</body>
+</html>

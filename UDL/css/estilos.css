@@ -1,0 +1,25 @@
+button:hover{
+    background-color: rgb(101, 33, 165);
+}
+
+.boton-panel{
+    font-size: 1.75em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: blueviolet;
+    text-decoration: none;
+}
+
+.boton-panel:hover{
+    background-color: rgb(101, 33, 165);
+}
+
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}

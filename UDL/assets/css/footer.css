@@ -1,0 +1,54 @@
+.footer-modern {
+    background-color: #7b2233; /* Maroon color */
+    color: #ecf0f1;
+    padding: 10px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.footer-modern .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20 0px;
+}
+.footer-modern .footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 0px;
+}
+.footer-modern .footer-section h4 {
+    color: #f1c40f; /* Gold color for accents */
+    margin-bottom: 20px;
+    font-weight: 600;
+    border-bottom: 2px solid #f1c40f;
+    padding-bottom: 0px;
+    display: inline-block;
+}
+.footer-modern .footer-section p,
+.footer-modern .footer-section a {
+    color: #bdc3c7;
+    text-decoration: none;
+    line-height: 1.8;
+    transition: color 0.3s ease;
+}
+.footer-modern .footer-section a:hover {
+    color: #f1c40f; /* Gold color for hover */
+}
+.footer-modern .footer-section .social-links a {
+    font-size: 24px;
+    margin-left: 10px;
+}
+.footer-modern .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #a04040; /* Darker maroon for border */
+    font-size: 14px;
+    color: #bdc3c7;
+}
+.footer-modern .footer-section ul {
+    list-style: none;
+    padding: 0;
+}
